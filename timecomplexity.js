@@ -1,59 +1,34 @@
-const bigBoss = [
-    {firstName:'Patrick' , secondName:'wyne',age:30},
-    {firstName:'Eric' , secondName:'mimi',age:21},
-    {firstName:'Dodos' , secondName:'deck',age:21},
-    {firstName:'Alian' , secondName:'Dwine',age:22},
-    {firstName:'Patrick' , secondName:'wyne',age:33},
-    {firstName:'Patrick' , secondName:'wyne',age:100},
-    {firstName:'Patrick' , secondName:'wyne',age:40},
-    ]
+function findMajority(arr1 , n)
+{
+    let maxCount = 0;
+    let index = 0;
 
-// const result1 = bigBoss.map((x)=>x.SecondName + x.age);
-let newArr = bigBoss.map(item => item.secondName + ":"+" "+ item.age);
-let newArr1 = bigBoss.map(item => item.firstName);
-// let keys = Object.keys(bigBoss.firstName);
+    for(let i = 0; i < n; i++)
+    {
+        let count = 0;
+        for (let j = 0; j < n; j++)
+        {
+            if(arr1[i] == arr1[j])
+            count++;
+        }
+        if(count > maxCount)
+        {
+            maxCount = count;
+            index = i;
+        }
+    }
+    if(maxCount > n / 2)
+    console.log(" this array contains a majority and it is " + arr1[index]);
+    else 
+    console.log("No Majority Element");
+}
 
-// console.log(`{${keys}}`);
-console.log(newArr1 +":"+newArr)
+let arr1 = [3,1,3,4,4,5,3,5,3,3,3,6,3];
 
+let n = arr1.length;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+findMajority(arr1, n);
 
 
 
 
-
-
-
-
-// const myArray = ["Patrick wyne,30"];
-// function objectify(array){
-//     var object = {}
-//     for(let i=0;i<array.length;i++){
-//         let val = [];
-//         var key = "";
-//         var info = "";
-//         val = array[i].split("");
-//         key = val[0];
-//         info = val[1];
-//         object[key]={
-//             "second-name":info.split(",")[0],
-//             age:info.split(",")[1]
-//         };
-        
-//     }
-//     return object;
-// }
-// console.log(objectify(myArray))
