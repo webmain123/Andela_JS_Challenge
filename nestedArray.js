@@ -26,6 +26,23 @@ console.log(arr_NestedObject([
 
 
 
+// const bigBoss = [
+//     {firstName:'Patrick' , secondName:'wyne',age:30},
+//     {firstName:'Eric' , secondName:'mimi',age:21},
+//     {firstName:'Dodos' , secondName:'deck',age:21},
+//     {firstName:'Alian' , secondName:'Dwine',age:22},
+//     {firstName:'Patrick' , secondName:'wyne',age:33},
+//     {firstName:'Patrick' , secondName:'wyne',age:100},
+//     {firstName:'Patrick' , secondName:'wyne',age:40},
+//     ]
+  
+  
+//   const newArr = bigBoss.map(item => item.secondName + ":"+" "+ item.age);
+//   const newArr1 = JSON.stringify(newArr);
+//   console.log(newArr1)
+
+
+
 
 
 
